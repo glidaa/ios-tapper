@@ -7,6 +7,7 @@
     <customFonts key="customFonts">
         <mutableArray key="HelveticaNeue.ttc">
             <string>HelveticaNeue</string>
+            <string>HelveticaNeue-Bold</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -25,14 +26,14 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="retrobg" translatesAutoresizingMaskIntoConstraints="NO" id="1f7-vH-DwT">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Tapper" translatesAutoresizingMaskIntoConstraints="NO" id="YMa-gq-luk">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Tapper" translatesAutoresizingMaskIntoConstraints="NO" id="YMa-gq-luk" userLabel="Logo">
                                 <rect key="frame" x="136" y="64" width="329" height="71"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="329" id="2mE-68-Leq"/>
                                     <constraint firstAttribute="height" constant="71" id="SVF-7Y-p04"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QRD-sK-u68">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QRD-sK-u68" userLabel="PlayBtn">
                                 <rect key="frame" x="176" y="412" width="249" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="Sgh-xd-BNd"/>
@@ -40,30 +41,51 @@
                                 </constraints>
                                 <state key="normal" image="playbtn"/>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="How many taps to win?" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qWt-Ti-qYp">
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="How many taps to win?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qWt-Ti-qYp" userLabel="tapsTxt">
                                 <rect key="frame" x="170" y="351" width="255" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="6RE-bE-MOv"/>
                                     <constraint firstAttribute="width" constant="255" id="M0d-VF-gvZ"/>
                                 </constraints>
-                                <color key="textColor" red="0.41062663612565442" green="0.41062663612565442" blue="0.41062663612565442" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ORT-Ek-glr" userLabel="CoinButton">
+                                <rect key="frame" x="214" y="28" width="172" height="177"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="177" id="crE-Vl-L8X"/>
+                                    <constraint firstAttribute="width" constant="172" id="ri4-q8-6IY"/>
+                                </constraints>
+                                <state key="normal" image="coin"/>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="100 Taps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ip7-T2-fcr">
+                                <rect key="frame" x="145" y="206" width="310" height="92"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="377" id="6Cs-LL-J6e"/>
+                                    <constraint firstAttribute="height" constant="92" id="wQk-QQ-Qgj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="35"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="YMa-gq-luk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="45" id="Aya-Ar-F0N"/>
+                            <constraint firstItem="Ip7-T2-fcr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6Qq-81-ggM"/>
                             <constraint firstItem="1f7-vH-DwT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Bl6-Er-4E7"/>
                             <constraint firstItem="QRD-sK-u68" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="C2G-Tw-Y0w"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1f7-vH-DwT" secondAttribute="bottom" id="Iw8-uB-8Bt"/>
                             <constraint firstItem="QRD-sK-u68" firstAttribute="centerX" secondItem="qWt-Ti-qYp" secondAttribute="centerX" id="NbU-lC-5Oi"/>
                             <constraint firstItem="QRD-sK-u68" firstAttribute="top" secondItem="qWt-Ti-qYp" secondAttribute="bottom" constant="31" id="ToS-Od-gcg"/>
                             <constraint firstItem="1f7-vH-DwT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="W3T-xE-Wbx"/>
+                            <constraint firstItem="ORT-Ek-glr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XGV-rs-aH1"/>
+                            <constraint firstItem="ORT-Ek-glr" firstAttribute="top" secondItem="YMa-gq-luk" secondAttribute="bottom" constant="8" id="ctm-3I-Pek"/>
+                            <constraint firstItem="ORT-Ek-glr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="e34-JB-wV0"/>
                             <constraint firstItem="YMa-gq-luk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kdE-ah-cnG"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QRD-sK-u68" secondAttribute="bottom" constant="65" id="okM-Z1-QdO"/>
                             <constraint firstAttribute="trailing" secondItem="1f7-vH-DwT" secondAttribute="trailing" id="s6r-me-Ube"/>
                             <constraint firstItem="qWt-Ti-qYp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uIn-ho-m9L"/>
+                            <constraint firstItem="Ip7-T2-fcr" firstAttribute="top" secondItem="ORT-Ek-glr" secondAttribute="bottom" constant="1" id="y3Q-Jc-Efl"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -79,6 +101,7 @@
     </scenes>
     <resources>
         <image name="Tapper" width="497" height="107"/>
+        <image name="coin" width="244" height="268"/>
         <image name="playbtn" width="356" height="175"/>
         <image name="retrobg" width="800" height="800"/>
     </resources>
