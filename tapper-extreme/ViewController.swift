@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     //Properties
     var maxTaps = 0
     var currentTaps = 0
+    
     //Outlets
     @IBOutlet weak var logoImg: UIImageView!
     @IBOutlet weak var howManyTapsTxt: UITextField!
@@ -25,6 +26,8 @@ class ViewController: UIViewController {
                 restartGame()
             }
     }
+    
+    //IBACtions
     @IBAction func onPlayBtnPressed(sender: UIButton!) {
                 if howManyTapsTxt != nil && howManyTapsTxt.text != "" {
                     logoImg.hidden = true
@@ -36,9 +39,10 @@ class ViewController: UIViewController {
                     maxTaps = Int(howManyTapsTxt.text!)!
                     currentTaps = 0
                     updateTapsLbl()
-
+                    dismissKeyboard()
         }
     }
+    
     func restartGame() {
         maxTaps = 0
         howManyTapsTxt.text = ""
@@ -58,8 +62,14 @@ class ViewController: UIViewController {
         }
         
     }
+    
     func updateTapsLbl() {
             tapsLbl.text = "\(currentTaps) Taps"
+    }
+    //Calls this function when the tap is recognized.
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
 }
 
