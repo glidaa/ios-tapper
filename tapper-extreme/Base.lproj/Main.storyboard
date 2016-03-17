@@ -53,7 +53,7 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ORT-Ek-glr" userLabel="CoinButton">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ORT-Ek-glr" userLabel="CoinButton">
                                 <rect key="frame" x="214" y="28" width="172" height="177"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="177" id="crE-Vl-L8X"/>
@@ -61,7 +61,7 @@
                                 </constraints>
                                 <state key="normal" image="coin"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="100 Taps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ip7-T2-fcr">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="100 Taps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ip7-T2-fcr">
                                 <rect key="frame" x="145" y="206" width="310" height="92"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="377" id="6Cs-LL-J6e"/>
@@ -85,6 +85,7 @@
                             <constraint firstItem="ORT-Ek-glr" firstAttribute="top" secondItem="YMa-gq-luk" secondAttribute="bottom" constant="8" id="ctm-3I-Pek"/>
                             <constraint firstItem="ORT-Ek-glr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="e34-JB-wV0"/>
                             <constraint firstItem="YMa-gq-luk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kdE-ah-cnG"/>
+                            <constraint firstItem="YMa-gq-luk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="44" id="nNP-vL-4sT"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QRD-sK-u68" secondAttribute="bottom" constant="65" id="okM-Z1-QdO"/>
                             <constraint firstAttribute="trailing" secondItem="1f7-vH-DwT" secondAttribute="trailing" id="s6r-me-Ube"/>
                             <constraint firstItem="qWt-Ti-qYp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uIn-ho-m9L"/>
@@ -98,6 +99,7 @@
                     </view>
                     <connections>
                         <outlet property="howManyTapsTxt" destination="qWt-Ti-qYp" id="cUp-fk-XfU"/>
+                        <outlet property="logoImg" destination="YMa-gq-luk" id="hjH-iH-1Pt"/>
                         <outlet property="playBtn" destination="QRD-sK-u68" id="ap2-V7-WCZ"/>
                         <outlet property="tapBtn" destination="ORT-Ek-glr" id="xiL-BS-8Lp"/>
                         <outlet property="tapsLbl" destination="Ip7-T2-fcr" id="2Xe-XH-Jmz"/>
