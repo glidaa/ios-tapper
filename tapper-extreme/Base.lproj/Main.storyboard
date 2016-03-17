@@ -26,13 +26,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="retrobg" translatesAutoresizingMaskIntoConstraints="NO" id="1f7-vH-DwT">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Tapper" translatesAutoresizingMaskIntoConstraints="NO" id="YMa-gq-luk" userLabel="Logo">
-                                <rect key="frame" x="136" y="64" width="329" height="71"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="329" id="2mE-68-Leq"/>
-                                    <constraint firstAttribute="height" constant="71" id="SVF-7Y-p04"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QRD-sK-u68" userLabel="PlayBtn">
                                 <rect key="frame" x="176" y="412" width="249" height="120"/>
                                 <constraints>
@@ -60,6 +53,9 @@
                                     <constraint firstAttribute="width" constant="172" id="ri4-q8-6IY"/>
                                 </constraints>
                                 <state key="normal" image="coin"/>
+                                <connections>
+                                    <action selector="onCoinTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mr4-hy-0Xc"/>
+                                </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="100 Taps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ip7-T2-fcr">
                                 <rect key="frame" x="145" y="206" width="310" height="92"/>
@@ -71,6 +67,13 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tapper" translatesAutoresizingMaskIntoConstraints="NO" id="YMa-gq-luk" userLabel="Logo">
+                                <rect key="frame" x="136" y="64" width="329" height="71"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="329" id="2mE-68-Leq"/>
+                                    <constraint firstAttribute="height" constant="71" id="SVF-7Y-p04"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -93,6 +96,7 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="ctm-3I-Pek"/>
                                 <exclude reference="uIn-ho-m9L"/>
                             </mask>
                         </variation>
