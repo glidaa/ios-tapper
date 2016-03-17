@@ -25,8 +25,8 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="retrobg" translatesAutoresizingMaskIntoConstraints="NO" id="jeG-ih-GZt">
                                 <rect key="frame" x="0.0" y="-5" width="600" height="605"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Welcome to the first app by Michael Castleman..." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="TqM-ce-FE7">
-                                <rect key="frame" x="180" y="123" width="240" height="56"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="Welcome to the first app by Michael Castleman..." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="TqM-ce-FE7">
+                                <rect key="frame" x="180" y="270" width="240" height="56"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
@@ -38,6 +38,8 @@
                             <constraint firstAttribute="trailing" secondItem="jeG-ih-GZt" secondAttribute="trailing" id="Kay-02-MNr"/>
                             <constraint firstItem="jeG-ih-GZt" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="XMa-fN-dNC"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="jeG-ih-GZt" secondAttribute="bottom" id="Zly-jz-mWE"/>
+                            <constraint firstItem="TqM-ce-FE7" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="ktE-UJ-dKm"/>
+                            <constraint firstItem="TqM-ce-FE7" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="nDt-vg-FaV"/>
                         </constraints>
                     </view>
                 </viewController>

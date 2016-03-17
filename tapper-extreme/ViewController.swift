@@ -36,6 +36,16 @@ class ViewController: UIViewController {
 
         }
     }
+    func restartGame() {
+        maxTaps = 0
+        howManyTapsTxt.text = ""
+        logoImg.hidden = false
+        playBtn.hidden = false
+        howManyTapsTxt.hidden = false
+        
+        tapBtn.hidden = true
+        tapsLbl.hidden = true
+    }
     
     func updateTapsLbl() {
             tapsLbl.text = "\(currentTaps) Taps"
